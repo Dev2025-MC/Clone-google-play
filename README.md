@@ -1,1 +1,1 @@
-# Clone-google-play
+# SEE IN GITHUB PAGES DUMMY >:<
