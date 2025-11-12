@@ -1,0 +1,682 @@
+.logo img {
+  width: 60px;
+  height: auto;
+  display: block;
+  margin: 0 auto 12px;
+  border-radius: 12px;
+}
+.btn, button, .small-btn {
+  background: radial-gradient(circle at center, rgba(255,255,255,0.12), rgba(255,255,255,0.02));
+  color: #fff;
+  border: 2px solid transparent;
+  border-radius: 999px;
+  padding: 8px 18px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover, button:hover, .small-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 25px rgba(255,255,255,0.3), 0 0 40px rgba(128,0,255,0.4);
+}
+body {
+  background: radial-gradient(ellipse at bottom, #0d1b2a 0%, #000 100%);
+  overflow: hidden;
+  color: white;
+  height: 100vh;
+}
+
+.stars {
+  width: 2px;
+  height: 2px;
+  background: white;
+  box-shadow:
+    20px 80px white,
+    100px 150px white,
+    200px 40px white,
+    300px 200px white,
+    400px 100px white,
+    500px 250px white,
+    600px 60px white,
+    700px 180px white,
+    800px 90px white,
+    900px 130px white;
+  animation: moveStars 60s linear infinite;
+}
+
+@keyframes moveStars {
+  from { transform: translateY(0px); }
+  to { transform: translateY(-1000px); }
+}
+/* Background Bintang */
+body {
+  background: radial-gradient(ellipse at bottom, #0b0b1a 0%, #000 100%);
+  overflow: hidden;
+  position: relative;
+  color: white;
+}
+
+.stars {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 2px;
+  background: white;
+  box-shadow:
+    50px 100px white,
+    150px 200px white,
+    300px 50px white,
+    450px 300px white,
+    600px 150px white,
+    750px 250px white,
+    900px 100px white,
+    1000px 350px white;
+  animation: moveStars 60s linear infinite;
+  z-index: 0;
+}
+
+@keyframes moveStars {
+  from { transform: translateY(0); }
+  to { transform: translateY(-1000px); }
+}
+/* Background Bintang Berkelap-Kelip */
+body {
+  background: radial-gradient(ellipse at bottom, #0b0b1a 0%, #000 100%);
+  overflow: hidden;
+  position: relative;
+  color: white;
+}
+
+.stars {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 2px;
+  background: white;
+  box-shadow:
+    50px 100px white,
+    150px 200px white,
+    300px 50px white,
+    450px 300px white,
+    600px 150px white,
+    750px 250px white,
+    900px 100px white,
+    1000px 350px white,
+    200px 500px white,
+    400px 600px white,
+    700px 550px white;
+  animation: moveStars 60s linear infinite, twinkle 2s ease-in-out infinite alternate;
+  z-index: 0;
+  opacity: 0.9;
+}
+
+@keyframes moveStars {
+  from { transform: translateY(0); }
+  to { transform: translateY(-1000px); }
+}
+
+@keyframes twinkle {
+  from { opacity: 0.3; }
+  to { opacity: 1; }
+}
+/* Background Bintang Berlapis & Berkelap-Kelip */
+body {
+  background: radial-gradient(ellipse at bottom, #0b0b1a 0%, #000 100%);
+  overflow: hidden;
+  position: relative;
+  color: white;
+}
+
+/* Lapisan bintang dekat (lebih besar & cepat) */
+.stars {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 2px;
+  background: white;
+  box-shadow:
+    50px 100px white,
+    150px 200px white,
+    300px 50px white,
+    450px 300px white,
+    600px 150px white,
+    750px 250px white,
+    900px 100px white,
+    1000px 350px white,
+    200px 500px white,
+    400px 600px white,
+    700px 550px white;
+  animation: moveStars 60s linear infinite, twinkle 2s ease-in-out infinite alternate;
+  z-index: 0;
+  opacity: 0.9;
+}
+
+/* Lapisan bintang jauh (lebih kecil & lambat) */
+.stars2 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 1px;
+  background: white;
+  box-shadow:
+    80px 200px white,
+    220px 600px white,
+    350px 400px white,
+    480px 700px white,
+    640px 300px white,
+    820px 500px white,
+    960px 650px white,
+    1100px 200px white,
+    1250px 550px white,
+    1350px 400px white;
+  animation: moveStars2 120s linear infinite, twinkle2 4s ease-in-out infinite alternate;
+  z-index: -1;
+  opacity: 0.6;
+}
+
+@keyframes moveStars {
+  from { transform: translateY(0); }
+  to { transform: translateY(-1000px); }
+}
+
+@keyframes moveStars2 {
+  from { transform: translateY(0); }
+  to { transform: translateY(-800px); }
+}
+
+@keyframes twinkle {
+  from { opacity: 0.3; }
+  to { opacity: 1; }
+}
+
+@keyframes twinkle2 {
+  from { opacity: 0.2; }
+  to { opacity: 0.8; }
+}
+/* Efek Aurora (Cahaya Utara) */
+.aurora {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 50% 50%, rgba(128,0,255,0.2), transparent 70%),
+              radial-gradient(circle at 30% 70%, rgba(0,255,255,0.15), transparent 80%),
+              radial-gradient(circle at 70% 40%, rgba(255,0,150,0.2), transparent 80%);
+  background-blend-mode: screen;
+  animation: auroraMove 20s ease-in-out infinite alternate;
+  z-index: -2;
+}
+
+@keyframes auroraMove {
+  0% {
+    background-position: 50% 50%, 30% 70%, 70% 40%;
+  }
+  100% {
+    background-position: 60% 40%, 40% 80%, 80% 30%;
+  }
+}
+/* Efek Aurora Hijau–Biru (Natural Style) */
+.aurora {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:
+    radial-gradient(circle at 40% 60%, rgba(0,255,150,0.25), transparent 70%),
+    radial-gradient(circle at 70% 40%, rgba(0,180,255,0.2), transparent 75%),
+    radial-gradient(circle at 50% 80%, rgba(0,255,200,0.15), transparent 80%);
+  background-blend-mode: screen;
+  animation: auroraMove 25s ease-in-out infinite alternate;
+  z-index: -2;
+  filter: blur(20px);
+}
+
+@keyframes auroraMove {
+  0% {
+    background-position: 40% 60%, 70% 40%, 50% 80%;
+  }
+  100% {
+    background-position: 60% 50%, 40% 70%, 70% 30%;
+  }
+}
+/* 🌫️ Efek Kabut dengan Refleksi Aurora */
+.fog {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 45%;
+  background:
+    radial-gradient(ellipse at bottom, rgba(0,255,200,0.15), transparent 70%),
+    radial-gradient(ellipse at 20% 90%, rgba(0,255,150,0.1), transparent 70%),
+    radial-gradient(ellipse at 80% 85%, rgba(0,200,255,0.1), transparent 70%),
+    linear-gradient(to top, rgba(0,0,0,0.5), transparent);
+  filter: blur(30px) brightness(1.2);
+  animation: fogMove 60s ease-in-out infinite alternate, fogGlow 8s ease-in-out infinite alternate;
+  z-index: -3;
+  pointer-events: none;
+  opacity: 0.8;
+}
+
+@keyframes fogMove {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-25px);
+  }
+  100% {
+    transform: translateX(25px);
+  }
+}
+
+@keyframes fogGlow {
+  0% {
+    filter: blur(30px) brightness(1.1);
+  }
+  100% {
+    filter: blur(40px) brightness(1.4);
+  }
+}
+/* 🌠 Efek Bintang Jatuh */
+.shooting-star {
+  position: fixed;
+  top: -10px;
+  left: 50%;
+  width: 2px;
+  height: 80px;
+  background: linear-gradient(45deg, white, rgba(255,255,255,0));
+  border-radius: 50%;
+  opacity: 0.8;
+  transform: rotate(45deg);
+  animation: shoot 6s linear infinite;
+  z-index: -1;
+}
+
+.shooting-star:nth-child(2) {
+  left: 20%;
+  animation-delay: 2s;
+  animation-duration: 8s;
+}
+
+.shooting-star:nth-child(3) {
+  left: 70%;
+  animation-delay: 4s;
+  animation-duration: 10s;
+}
+
+@keyframes shoot {
+  0% {
+    transform: translate(0, 0) rotate(45deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  50% {
+    transform: translate(-300px, 300px) rotate(45deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-600px, 600px) rotate(45deg);
+    opacity: 0;
+  }
+}
+/* 🌟 Animasi Masuk Halus */
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+.fade-in-up.delay-1 {
+  animation-delay: 0.3s;
+}
+
+.fade-in-up.delay-2 {
+  animation-delay: 0.6s;
+}
+
+.fade-in-up.delay-3 {
+  animation-delay: 0.9s;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Pastikan body bisa scroll */
+html, body {
+  height: auto;
+  min-height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* Pastikan layer background tidak menutupi klik/scroll */
+.fog,
+.aurora,
+.stars,
+.stars2,
+.shooting-star {
+  pointer-events: none;
+}
+
+/* Pastikan konten utama di atas background */
+body > *:not(.fog):not(.aurora):not(.stars):not(.stars2):not(.shooting-star) {
+  position: relative;
+  z-index: 1;
+}
+/* 🌠 Scroll Reveal Animations (Tanpa JS) */
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Elemen dengan animasi masuk saat di-scroll */
+.scroll-animate {
+  opacity: 0;
+  animation: fadeSlide 1s ease-out both;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+/* 🌈 Neon Background Futuristik */
+.neon-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 20% 30%, rgba(255,0,255,0.3), transparent 60%),
+              radial-gradient(circle at 80% 70%, rgba(0,255,255,0.3), transparent 60%),
+              linear-gradient(135deg, #0d001f, #120033, #1a004b);
+  background-blend-mode: screen;
+  animation: neonPulse 8s ease-in-out infinite alternate;
+  z-index: -4;
+  filter: blur(8px);
+}
+
+/* Efek berdenyut neon */
+@keyframes neonPulse {
+  0% {
+    filter: brightness(1.2) blur(8px);
+  }
+  100% {
+    filter: brightness(1.6) blur(12px);
+  }
+}
+/* 🌃 Neon Dark Mode Background */
+.neon-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 25% 30%, rgba(255, 0, 255, 0.25), transparent 70%),
+    radial-gradient(circle at 75% 70%, rgba(0, 255, 255, 0.25), transparent 70%),
+    linear-gradient(135deg, #020010 0%, #050017 50%, #08001f 100%);
+  background-blend-mode: screen;
+  animation: neonDarkPulse 10s ease-in-out infinite alternate;
+  z-index: -5;
+  filter: blur(10px) brightness(1.1);
+}
+
+/* ✨ Efek neon berdenyut halus */
+@keyframes neonDarkPulse {
+  0% {
+    filter: brightness(1.0) blur(10px);
+  }
+  50% {
+    filter: brightness(1.5) blur(12px);
+  }
+  100% {
+    filter: brightness(1.2) blur(10px);
+  }
+}
+/* ⚡ Refleksi Neon untuk Tombol */
+button,
+.btn,
+.small-btn {
+  position: relative;
+  background: rgba(20, 20, 30, 0.8);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 12px;
+  padding: 10px 18px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.2), 0 0 20px rgba(255, 0, 255, 0.2);
+}
+
+/* 🌈 Efek glowing saat hover */
+button:hover,
+.btn:hover,
+.small-btn:hover {
+  border-color: rgba(0, 255, 255, 0.8);
+  box-shadow:
+    0 0 20px rgba(0, 255, 255, 0.5),
+    0 0 40px rgba(255, 0, 255, 0.5),
+    inset 0 0 15px rgba(255, 255, 255, 0.1);
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+/* 🌠 Animasi refleksi berjalan */
+button::after,
+.btn::after,
+.small-btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  transform: skewX(-20deg);
+  transition: 0.5s;
+}
+
+button:hover::after,
+.btn:hover::after,
+.small-btn:hover::after {
+  left: 125%;
+}
+
+/* 🎮 Kartu aplikasi dengan refleksi neon */
+.app-card {
+  background: rgba(15, 15, 30, 0.7);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  box-shadow:
+    0 0 20px rgba(0, 255, 255, 0.2),
+    0 0 40px rgba(255, 0, 255, 0.1);
+  padding: 20px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.app-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow:
+    0 0 30px rgba(0, 255, 255, 0.4),
+    0 0 60px rgba(255, 0, 255, 0.3);
+}
+.install-btn {
+  display: inline-block;
+  background: rgba(20, 20, 30, 0.8);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 12px;
+  padding: 10px 18px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.2),
+              0 0 20px rgba(255, 0, 255, 0.2);
+}
+.install-btn {
+  display: inline-block;
+  background: rgba(20, 20, 30, 0.8);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 12px;
+  padding: 10px 18px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.2),
+              0 0 20px rgba(255, 0, 255, 0.2);
+}
+
+.install-btn:hover {
+  border-color: rgba(0, 255, 255, 0.8);
+  box-shadow:
+    0 0 20px rgba(0, 255, 255, 0.5),
+    0 0 40px rgba(255, 0, 255, 0.5),
+    inset 0 0 15px rgba(255, 255, 255, 0.1);
+  transform: scale(1.05);
+  cursor: pointer;
+}
+/* 🌈 Tombol Install Neon Berganti Warna */
+.install-btn {
+  display: inline-block;
+  padding: 12px 25px;
+  color: #fff;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 12px;
+  border: 2px solid transparent;
+  background: linear-gradient(90deg, #00ffff, #ff00ff, #00ffff);
+  background-size: 300%;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  animation: neonGradient 5s linear infinite;
+  box-shadow:
+    0 0 10px rgba(0, 255, 255, 0.4),
+    0 0 20px rgba(255, 0, 255, 0.3);
+}
+
+/* ✨ Efek glowing saat hover */
+.install-btn:hover {
+  transform: scale(1.05);
+  box-shadow:
+    0 0 20px rgba(0, 255, 255, 0.7),
+    0 0 40px rgba(255, 0, 255, 0.5),
+    0 0 60px rgba(255, 255, 255, 0.3);
+}
+
+/* 🎨 Animasi warna berubah lembut */
+@keyframes neonGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+/* 🌈 Tombol Install dengan Border Pelangi & Glow */
+.install-btn {
+  position: relative;
+  display: inline-block;
+  padding: 12px 28px;
+  color: #fff;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 12px;
+  text-decoration: none;
+  background: linear-gradient(90deg, #00ffff, #ff00ff, #00ffff);
+  background-size: 300%;
+  animation: neonGradient 5s linear infinite;
+  overflow: hidden;
+  z-index: 1;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 15px rgba(0,255,255,0.4), 0 0 25px rgba(255,0,255,0.4);
+}
+
+/* 🌈 Border pelangi berputar */
+.install-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  padding: 2px;
+  background: linear-gradient(270deg, 
+    #ff00ff, #00ffff, #00ff99, #ff0099, #ff00ff);
+  background-size: 600% 600%;
+  animation: rainbowBorder 6s linear infinite;
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  z-index: -1;
+}
+
+/* ✨ Hover = glow makin terang */
+.install-btn:hover {
+  transform: scale(1.08);
+  box-shadow: 
+    0 0 25px rgba(0,255,255,0.8),
+    0 0 40px rgba(255,0,255,0.6),
+    0 0 60px rgba(255,255,255,0.3);
+}
+
+/* 🎨 Animasi gradasi neon di dalam tombol */
+@keyframes neonGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* 🌈 Animasi border pelangi bergerak */
+@keyframes rainbowBorder {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+  }
+    
