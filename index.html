@@ -1,0 +1,245 @@
+<!--
+Play Store Clone (Simple Modern UI + Rainbow Outline Buttons)
+-->
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Play Store — Rainbow Outline Buttons</title>
+  <link rel="stylesheet" href="Style.css" />
+  <style>
+    :root {
+      --bg1: #0d0b16;
+      --bg2: #3a0ca3;
+      --accent: #7b2cbf;
+      --accent-2: #9d4edd;
+      --text: #f1f1f1;
+      --muted: #a1a1aa;
+      --card: #1a1a28;
+      --radius: 14px;
+      --shadow: 0 4px 20px rgba(0,0,0,0.4);
+    }
+
+    * {box-sizing: border-box;margin: 0;padding: 0;font-family: 'Inter', sans-serif;}
+
+    body {
+      background: linear-gradient(160deg, var(--bg1), var(--bg2));
+      color: var(--text);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+      min-height: 100vh;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .logo img { width: 60px; height: auto; display:block; margin: 0 auto 12px; }
+
+    header h1 {
+      font-size: 24px;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    header p {
+      color: var(--muted);
+      font-size: 14px;
+      margin-top: 6px;
+    }
+
+    .search {
+      margin-top: 24px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .search input {
+      width: 100%;
+      max-width: 400px;
+      background: #252538;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 999px;
+      font-size: 14px;
+      color: #fff;
+      outline: none;
+      box-shadow: var(--shadow);
+    }
+
+    main {
+      width: 100%;
+      max-width: 1000px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: var(--radius);
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      box-shadow: var(--shadow);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 30px rgba(0,0,0,0.6);
+    }
+
+    .app-icon {
+      width: 70px;
+      height: 70px;
+      border-radius: 20%;
+      display: grid;
+      place-items: center;
+      font-size: 24px;
+      font-weight: bold;
+      color: #fff;
+      margin-bottom: 14px;
+    }
+
+    .p1 {background: linear-gradient(135deg, #ff7e5f, #feb47b);}
+    .p2 {background: linear-gradient(135deg, #56ccf2, #2f80ed);}
+    .p3 {background: linear-gradient(135deg, #8e2de2, #4a00e0);}
+
+    h3 {font-size: 16px;margin-bottom: 6px;}
+    p {font-size: 13px;color: var(--muted);margin-bottom: 12px;}
+
+    /* --- Rainbow glowing outline for all buttons --- */
+    .btn, button, .small-btn {
+      background: transparent;
+      color: #fff;
+      border: 2px solid transparent;
+      border-radius: 999px;
+      padding: 8px 18px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      position: relative;
+      z-index: 0;
+      transition: transform 0.2s ease, box-shadow 0.3s ease;
+    }
+
+    .btn::before, button::before, .small-btn::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      padding: 2px;
+      background: linear-gradient(45deg, red, orange, yellow, green, cyan, blue, violet, red);
+      background-size: 400%;
+      -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      animation: rainbow 6s linear infinite;
+      z-index: -1;
+    }
+
+    @keyframes rainbow {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+
+    .btn:hover, button:hover, .small-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 0 20px rgba(255,255,255,0.2);
+    }
+
+    footer {
+      margin-top: 50px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    @media (max-width: 680px) {
+      body { padding: 24px 12px }
+      .app-icon { width: 64px; height: 64px }
+    }
+  </style>
+</head>
+<body>
+<div class="stars"></div>
+<div class="stars2"></div>
+<div class="aurora"></div>
+<div class="fog"></div>
+<!--Binatang jatuh-->
+<div class="shooting-star"></div>
+<div class="shooting-star"></div>
+<div class="shooting-star"></div>
+<div class="shooting-star"></div>
+  <header>
+    <div class="logo fade-in-up delay-1">
+      <img src="Images.jpeg" alt="Play Store Logo">
+    </div>
+    <h1 class="fade-in-up delay-2 scroll-animate">Play Store</h1>
+    <p class="fade-in-up delay-3">Aplikasi & game pilihan terbaik</p>
+    <div class="search">
+      <input type="text" placeholder="Cari aplikasi atau game...">
+    </div>
+  </header>
+
+  <main>
+    <div class="card">
+      <div class="app-icon p1">
+        <img src="ob.png" alt="Toolcoin logo" width="50" height="50" />
+      </div>
+      <h3>Toolcoin</h3>
+      <p>Download all the content in minecraft for fres</p>
+<a href="https://www.mediafire.com/file/q7jekcl09fqd7ku/toolcoin.apk/file" class="install-btn">Install</a>
+</div>
+
+    <div class="card">
+      <div class="app-icon p2">
+        <img src="mcoin.png" alt="Mc Logo" width="50" height="50" />
+      </div>
+      <h3>Minecraft dlc free</h3>
+      <p>Download marcetplace addon for free</p>
+<a href="https://www.mediafire.com/file/b1m2lrqgf1o6l4w/MCDLCFREE.apk/file" class="install-btn">Install</a>
+    </div>
+
+<div class="card">
+<div class="app-icon p3">
+  <img src="icon.png" alt="Hell logo" width="50" height="50"/>
+</div>
+<h3>hell 8.0</h3>
+<p>When The Fire burn anything I Will Be Happy</p>
+<a href="https://www.mediafire.com/file/wajzpu58b4jojdf/minecraft-hell-8.0-hell606.apk/file" class="install-btn">Install</a>
+</div>
+
+      <div class="card">
+     <div class="app-icon p3">
+       <img src="download.jpeg" alt="mcpedl logo" width="50" height="50"/>
+     </div>
+    <h3>MCPEDL</h3>
+    <p>best Way to Download Texture,addon,maps,and scrips</p></p>
+<a href="https://play.google.com/store/apps/details?id=com.overwolf.mcpedl" class="install-btn">Install</a>
+  </div>
+  
+        <div class="card">
+     <div class="app-icon p3">
+       <img src="app_icon.png" alt="Angela virus logo" width="50" height="50" />
+     </div>
+    <h3>Angela virus</h3>
+    <p>Dont Install it</p>
+<a href="https://www.mediafire.com/file/s078ixv1ao4h3lr/my-horror-angela-2-remake.apk/file" class="install-btn">Install</a>
+  </div>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 Play Store Clone • ImTopicKiwi 
+  </footer>
+</body>
+</html>
